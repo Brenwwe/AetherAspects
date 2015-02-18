@@ -1,0 +1,14 @@
+[
+{
+  "modid": "AetherAspects",
+  "name": "Aether Aspects",
+  "description": "Adds Thaumcraft aspects to the Aether.",
+  "version": "1.7.10-1.1",
+  "mcversion": "1.7.10",
+  "authorList": ["Brendan Freeman"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
