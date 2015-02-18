@@ -13,10 +13,11 @@ public class ThaumcraftAspects
 	public static void init()
 	{
 		blocks();
-		init();
+		items();
+		mobs();
 	}
 	
-	public static void blocks()
+	private static void blocks()
 	{
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherBlocks.AetherPortal), new int[]{0}, (new AspectList()).add(Aspect.WATER, 4).add(Aspect.TRAVEL, 4));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherBlocks.AetherDirt), new int[]{0}, (new AspectList()).add(Aspect.EARTH, 2));
@@ -95,7 +96,7 @@ public class ThaumcraftAspects
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherBlocks.SkyrootLadder), new int[]{0}, (new AspectList()).add(Aspect.TREE, 1));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.SkyrootBed), new int[]{0}, (new AspectList()).add(Aspect.CRAFT, 3).add(Aspect.CLOTH, 6));
 	}
-	public static void items()
+	private static void items()
 	{
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.SkyrootSword), new int[]{0}, (new AspectList()).add(Aspect.TREE, 3).add(Aspect.WEAPON, 1));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.SkyrootPickaxe), new int[]{0}, (new AspectList()).add(Aspect.TREE, 3).add(Aspect.MINE, 1));
@@ -215,10 +216,42 @@ public class ThaumcraftAspects
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.ValkyrieLeggings), new int[]{0}, (new AspectList()).add(Aspect.AIR,6).add(Aspect.METAL,6).add(Aspect.ARMOR,6));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.ValkyrieBoots), new int[]{0}, (new AspectList()).add(Aspect.AIR,5).add(Aspect.METAL,3).add(Aspect.ARMOR,5));
 		
-		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.SentryBoots), new int[]{0}, (new AspectList()).add(Aspect.BEAST,5).add(Aspect.METAL,3).add(Aspect.ARMOR,5));
+		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.SentryBoots), new int[]{0}, (new AspectList()).add(Aspect.BEAST,5).add(Aspect.METAL,3).add(Aspect.ARMOR,5));	
+	}
+	
+	private static void mobs()
+	{
+		ThaumcraftApi.registerEntityTag("zephyr", (new AspectList()).add(Aspect.AIR, 2).add(Aspect.FLIGHT, 1));
+		ThaumcraftApi.registerEntityTag("cockatrice", (new AspectList()).add(Aspect.POISON, 1).add(Aspect.TAINT, 2).add(Aspect.BEAST, 1));
+		ThaumcraftApi.registerEntityTag("swet", (new AspectList()).add(Aspect.SLIME, 1).add(Aspect.TRAP, 1).add(Aspect.MOTION, 1));
+		ThaumcraftApi.registerEntityTag("aechorPlant", (new AspectList()).add(Aspect.PLANT, 2).add(Aspect.POISON, 1).add(Aspect.TAINT, 1));
+		ThaumcraftApi.registerEntityTag("sentry", (new AspectList()).add(Aspect.MECHANISM, 2).add(Aspect.TRAP, 2).add(Aspect.FIRE, 1));
+		ThaumcraftApi.registerEntityTag("mimic", (new AspectList()).add(Aspect.VOID, 2).add(Aspect.MIND, 1).add(Aspect.TRAP, 2));
+		ThaumcraftApi.registerEntityTag("phyg", (new AspectList()).add(Aspect.FLIGHT, 2).add(Aspect.MAGIC, 1));
+		ThaumcraftApi.registerEntityTag("aerbunny", (new AspectList()).add(Aspect.AIR, 1).add(Aspect.MOTION, 1).add(Aspect.LIFE, 1));
+		ThaumcraftApi.registerEntityTag("moa", (new AspectList()).add(Aspect.FLIGHT, 2).add(Aspect.MOTION, 2));
+		ThaumcraftApi.registerEntityTag("sheepuff", (new AspectList()).add(Aspect.AIR, 1).add(Aspect.LIFE, 1));
+		ThaumcraftApi.registerEntityTag("aerwhale", (new AspectList()).add(Aspect.AIR, 5));
+		ThaumcraftApi.registerEntityTag("flyingCow", (new AspectList()).add(Aspect.FLIGHT, 2).add(Aspect.MAGIC, 1));
+		ThaumcraftApi.registerEntityTag("slider", (new AspectList()).add(Aspect.ENERGY, 4).add(Aspect.MOTION, 2).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 10));
+		ThaumcraftApi.registerEntityTag("tempest", (new AspectList()).add(Aspect.WEATHER, 2).add(Aspect.FLIGHT, 1).add(Aspect.DARKNESS, 2));
+		ThaumcraftApi.registerEntityTag("trackingGolem", (new AspectList()).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 1));
+		ThaumcraftApi.registerEntityTag("sentryGolem", (new AspectList()).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 1).add(Aspect.CRAFT, 2));
+		ThaumcraftApi.registerEntityTag("battleSentry", (new AspectList()).add(Aspect.TRAP, 1).add(Aspect.MECHANISM, 1).add(Aspect.SENSES, 2));
+		ThaumcraftApi.registerEntityTag("carrionSprout", (new AspectList()).add(Aspect.PLANT, 2));
+		ThaumcraftApi.registerEntityTag("sliderHostMimic", (new AspectList()).add(Aspect.ENERGY, 2).add(Aspect.MOTION, 2).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 4));
+		ThaumcraftApi.registerEntityTag("labyrinthEye", (new AspectList()).add(Aspect.ENERGY, 2).add(Aspect.MOTION, 2).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 4));
+		ThaumcraftApi.registerEntityTag("sentryGuardian", (new AspectList()).add(Aspect.ENERGY, 2).add(Aspect.MOTION, 2).add(Aspect.SENSES, 2).add(Aspect.MECHANISM, 2).add(Aspect.ARMOR, 4));
+		ThaumcraftApi.registerEntityTag("zephyroo", (new AspectList()).add(Aspect.MOTION, 2).add(Aspect.AIR, 2).add(Aspect.LIFE, 1));
 		
-		
-		
+		ThaumcraftApi.registerEntityTag("soaringWisp", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("fleetingWisp", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("etherealWisp", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("shadeOfArkenzus", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("fangrin", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("babyBinkSwet", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("kraisith", (new AspectList()).add(Aspect.LIFE, 2));
+		ThaumcraftApi.registerEntityTag("nexSpirit", (new AspectList()).add(Aspect.LIFE, 2));
 	}
 	
 }
