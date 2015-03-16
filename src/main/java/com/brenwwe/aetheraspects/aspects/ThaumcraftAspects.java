@@ -162,7 +162,7 @@ public class ThaumcraftAspects
 		
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.MoaEgg), new int[]{0}, (new AspectList()).add(Aspect.LIFE,2));
 		
-		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.AetherMusicDisc), new int[]{0}, (new AspectList()).add(Aspect.GREED,4).add(Aspect.SENSES,4));
+		//ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.AetherMusicDisc), new int[]{0}, (new AspectList()).add(Aspect.GREED,4).add(Aspect.SENSES,4));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.MoaMusicDisc), new int[]{0}, (new AspectList()).add(Aspect.GREED,4).add(Aspect.SENSES,4));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.AerwhaleMusicDisc), new int[]{0}, (new AspectList()).add(Aspect.GREED,4).add(Aspect.SENSES,4));
 		ThaumcraftApi.registerObjectTag(new ItemStack(AetherItems.LabyrinthMusicDisc), new int[]{0}, (new AspectList()).add(Aspect.GREED,4).add(Aspect.SENSES,4));
